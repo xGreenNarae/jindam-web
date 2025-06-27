@@ -1,4 +1,5 @@
 baseURL = "https://xgreennarae.github.io/jindam-web/"
+canonifyURLs = true
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 

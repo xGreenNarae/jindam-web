@@ -34,3 +34,5 @@ npm install
 ## 빌드할때
 hugo build --themesDir=./theme/ --ignoreCache --baseURL https://xgreennarae.github.io/jindam-web/
 - hugo.toml의 baseURL도 바꿔줘야하는지도
+
+- hugo.toml에 canonifyURLs = true 설정해주어야 image link, 홈경로등이 깨지지않는듯
