@@ -2,65 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/zh/</loc>
+    <loc>https://xgreennarae.github.io/jindam-web/zh/</loc>
     <lastmod>2024-12-11T09:34:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/"
+                href="https://xgreennarae.github.io/jindam-web/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/"
+                href="https://xgreennarae.github.io/jindam-web/zh/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/categories/</loc>
+    <loc>https://xgreennarae.github.io/jindam-web/zh/categories/</loc>
     <lastmod>2024-12-11T09:34:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/categories/"
+                href="https://xgreennarae.github.io/jindam-web/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/categories/"
+                href="https://xgreennarae.github.io/jindam-web/zh/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/eg1---zh/</loc>
+    <loc>https://xgreennarae.github.io/jindam-web/zh/tags/eg1---zh/</loc>
     <lastmod>2024-12-11T09:34:12+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/categories/example-1---zh/</loc>
+    <loc>https://xgreennarae.github.io/jindam-web/zh/categories/example-1---zh/</loc>
     <lastmod>2024-12-11T09:34:12+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/example1/example1/</loc>
+    <loc>https://xgreennarae.github.io/jindam-web/zh/example1/example1/</loc>
     <lastmod>2024-12-11T09:34:12+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/zh/example1/</loc>
+    <loc>https://xgreennarae.github.io/jindam-web/zh/example1/</loc>
     <lastmod>2024-12-11T09:34:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/example1/"
+                href="https://xgreennarae.github.io/jindam-web/en/example1/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/example1/"
+                href="https://xgreennarae.github.io/jindam-web/zh/example1/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/tags/</loc>
+    <loc>https://xgreennarae.github.io/jindam-web/zh/tags/</loc>
     <lastmod>2024-12-11T09:34:12+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/tags/"
+                href="https://xgreennarae.github.io/jindam-web/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/tags/"
+                href="https://xgreennarae.github.io/jindam-web/zh/tags/"
                 />
   </url>
 </urlset>
