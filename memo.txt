@@ -36,3 +36,8 @@ hugo build --themesDir=./theme/ --ignoreCache --baseURL https://xgreennarae.gith
 - hugo.toml의 baseURL도 바꿔줘야하는지도
 
 - hugo.toml에 canonifyURLs = true 설정해주어야 image link, 홈경로등이 깨지지않는듯
+
+
+## page bundle
+즉, 콘텐츠묶음(본문, 이미지등의 집합) 1개당 1디렉토리로 묶어쓰고싶을때
+content 템플릿이 되는 .md 파일명을 index.md 로 해야한다. 안그럼 같은경로의 이미지인 1.jpg 같은걸 인식못한다.

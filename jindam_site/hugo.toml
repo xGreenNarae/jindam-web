@@ -51,11 +51,11 @@ theme = "Niello"
 	categories = ["Design"]
 	limit = 2
 [params.email]
-	contact = "angularcorp@outlook.com"
+	contact = "editor@jindam.news"
 [params.ignore]
 	categories = ["privacy", "terms", "archives", "cookie"]
 [params.license]
-	copyright = "&#xA9; 2019 ~ 2025 by <a href='https://www.angularcorp.com/'>www.angularcorp.com</a> All Rights Reserved."
+	copyright = "&#xA9; 2019 ~ 2025 by <a href='https://jindam.news/'>jindam.news/</a> All Rights Reserved."
 [params.share]
 	sharethis = "******"
 [params.disqus]
