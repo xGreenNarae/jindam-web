@@ -30,3 +30,7 @@ npm cache clean --force
 # 4. 필요한 패키지 재설치
 npm install
 
+
+## 빌드할때
+hugo build --themesDir=./theme/ --ignoreCache --baseURL https://xgreennarae.github.io/jindam-web/
+- hugo.toml의 baseURL도 바꿔줘야하는지도
