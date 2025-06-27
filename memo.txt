@@ -1,0 +1,32 @@
+
+niello 테마를 사용해서한다.
+https://github.com/guangmean/Niello
+
+## exampleSite 실행하는법
+exampleSite 디렉토리까지들어가서,
+hugo server --themesDir=../..
+hugo server --themesDir=../.. --disableFastRender --ignoreCach
+
+
+## css변경
+assets의 main.css 가 tailwindcss의 template같은거고 이를이용해서
+app.css 를 만들어야한다. 예를들어 이런명령어 쓰면 되는거같긴하다.
+npx tailwindcss -i ./assets/css/main.css -o ./assets/css/app.css --watch
+npx tailwindcss -i ./assets/css/main.css -o ./assets/css/app.css
+
+그리고 hugo 프로젝트디렉토리의 public 을 날리고 hugo 재실행하면 public 다시만들어지면서 css변경ㅇ완료되는듯.
+
+
+## node modules 오류나는경우
+# 1. node_modules 폴더 삭제
+rm -rf node_modules
+
+# 2. package-lock.json 파일도 삭제 (버전 충돌 방지)
+rm -f package-lock.json
+
+# 3. npm 캐시도 정리 (선택사항이지만 추천)
+npm cache clean --force
+
+# 4. 필요한 패키지 재설치
+npm install
+
