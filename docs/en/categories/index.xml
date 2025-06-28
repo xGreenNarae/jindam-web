@@ -6,29 +6,8 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jun 2025 01:59:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Dec 2024 08:16:03 +0800</lastBuildDate>
     <atom:link href="https://xgreennarae.github.io/jindam-web/en/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>사회</title>
-      <link>https://xgreennarae.github.io/jindam-web/en/categories/%EC%82%AC%ED%9A%8C/</link>
-      <pubDate>Sat, 28 Jun 2025 01:59:00 +0900</pubDate>
-      <guid>https://xgreennarae.github.io/jindam-web/en/categories/%EC%82%AC%ED%9A%8C/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Design</title>
-      <link>https://xgreennarae.github.io/jindam-web/en/categories/design/</link>
-      <pubDate>Wed, 08 Jan 2025 09:32:11 +0800</pubDate>
-      <guid>https://xgreennarae.github.io/jindam-web/en/categories/design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Development</title>
-      <link>https://xgreennarae.github.io/jindam-web/en/categories/development/</link>
-      <pubDate>Wed, 08 Jan 2025 09:32:11 +0800</pubDate>
-      <guid>https://xgreennarae.github.io/jindam-web/en/categories/development/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Privacy</title>
       <link>https://xgreennarae.github.io/jindam-web/en/categories/privacy/</link>
@@ -55,6 +34,20 @@
       <link>https://xgreennarae.github.io/jindam-web/en/categories/cookie/</link>
       <pubDate>Fri, 25 Oct 2024 09:16:03 +0800</pubDate>
       <guid>https://xgreennarae.github.io/jindam-web/en/categories/cookie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>갤러리진담</title>
+      <link>https://xgreennarae.github.io/jindam-web/en/categories/%EA%B0%A4%EB%9F%AC%EB%A6%AC%EC%A7%84%EB%8B%B4/</link>
+      <pubDate>Sun, 17 Mar 2024 00:35:00 +0900</pubDate>
+      <guid>https://xgreennarae.github.io/jindam-web/en/categories/%EA%B0%A4%EB%9F%AC%EB%A6%AC%EC%A7%84%EB%8B%B4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>사회</title>
+      <link>https://xgreennarae.github.io/jindam-web/en/categories/%EC%82%AC%ED%9A%8C/</link>
+      <pubDate>Mon, 11 Mar 2024 11:06:00 +0900</pubDate>
+      <guid>https://xgreennarae.github.io/jindam-web/en/categories/%EC%82%AC%ED%9A%8C/</guid>
       <description></description>
     </item>
   </channel>
