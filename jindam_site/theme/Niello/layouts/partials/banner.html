@@ -14,17 +14,22 @@
         {{ range $index, $element := $pages }}
         <div class="relative w-full h-96 shrink-0">
             <a href="{{ .RelPermalink }}" class="hover:cursor-pointer">
-                {{ $image := partial "imagextractor.html" (dict "context" .) }}
-                {{ if not (hasPrefix $image.url "data:image/") }}
-                <img src="{{ $image.url }}" alt="{{ $image.alt}}" class="w-full h-96 object-cover rounded-lg">
+                {{ $thumbnail := .Params.thumbnail }}
+                {{ if $thumbnail }}
+                    {{ $imgURL := "" }}
+                    {{ if or (hasPrefix $thumbnail "http") (hasPrefix $thumbnail "data:image") (hasPrefix $thumbnail "/") }}
+                        {{ $imgURL = $thumbnail }}
+                    {{ else }}
+                        {{ $imgURL = print (.RelPermalink) $thumbnail }}
+                    {{ end }}
+                    <img src="{{ $imgURL }}" alt="No Image" class="w-full h-96 object-cover rounded-lg"/>
                 {{ else }}
-                <img src="{{ $image.url }}?v={{ now.Unix }}" alt="{{ $image.alt}}"
-                    class="w-full h-96 object-cover rounded-lg">
+                    <img src="/image/jindam_logo_top_new.png" alt="No image" class="w-full h-96 object-cover rounded-lg"/>
                 {{ end }}
                 <div
-                    class="absolute inset-x-0 bottom-0 h-auto pt-3 pb-5 overflow-hidden bg-gray-600/30 backdrop-blur-xl">
+                    class="absolute inset-x-0 bottom-0 h-auto pt-3 pb-5 overflow-hidden bg-gray-600/30 backdrop-blur-xl"/>
                     <h3
-                        class="mt-2 lg:py-2 line-clamp-1 text-center text-2xl font-medium leading-none text-gray-100 hover:text-gray-600">
+                        class="mt-2 lg:py-2 line-clamp-1 text-center text-2xl font-medium leading-none text-gray-100 hover:text-gray-600"/>
                         {{ if gt (len .Title) 0 }} {{ .Title }} {{ else }} - {{ end }}
                     </h3>
                 </div>
@@ -104,13 +109,15 @@
         swiper.addEventListener('mouseleave', startAutoPlay);
 
         // Manual Controls
-        document.getElementById('prevBanner').addEventListener('click', function () {
+        document.getElementById('prevBanner').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default anchor behavior
             stopAutoPlay();
             moveToPreviousSlide();
             startAutoPlay();
         });
 
-        document.getElementById('nextBanner').addEventListener('click', function () {
+        document.getElementById('nextBanner').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default anchor behavior
             stopAutoPlay();
             moveToNextSlide();
             startAutoPlay();
