@@ -1,5 +1,35 @@
 {{ define "main" }}
 
+<!-- image랑 text 여백 차이 두기 -->
+<style>
+.article-body figure {
+  margin: 2rem 0;
+}
+.article-body figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.article-body figure figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+.article-body > p, {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .article-body > p {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+</style>
+
 <article class="single-article">
     <!--
 <img src="/img/lemon.webp" alt="" class="w-full h-96 object-cover rounded-lg">
@@ -16,7 +46,7 @@
         </time>
 
         <div
-            class="mt-1 lg:pb-10 px-2 text-2xl leading-10 font-thin text-gray-500 overflow-hidden break-words article-body">
+            class="mt-1 lg:pb-10 px-2 text-lg leading-10 font-thin text-white overflow-hidden break-words article-body">
             {{
             .Content |
             safeHTML }}

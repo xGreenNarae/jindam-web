@@ -7,6 +7,12 @@ staticDir = ["static", "themes/Niello/static"]
 
 theme = "Niello"
 
+# md 안에 html 넣을때
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [languages]
 	[languages.en]
 		languageCode = "en-us"
