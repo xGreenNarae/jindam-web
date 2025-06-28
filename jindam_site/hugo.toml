@@ -44,6 +44,7 @@ theme = "Niello"
 			weight = 3
 
 [params]
+    instagram = "https://www.instagram.com/jindam.cau"
 [params.google]
 	google_ad_client = "******"
 	ga4 = "******"
