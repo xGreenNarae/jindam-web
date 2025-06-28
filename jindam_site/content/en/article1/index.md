@@ -1,7 +1,7 @@
 +++
 title = '야생동물-인간 사이 최전방 근무'
 date = 2024-03-11T11:06:00+09:00
-categories = ["사회"]
+categories = ["사회", "추천"]
 tags = ["사회", "야생동물"]
 keywords = ["야생동물"]
 description = "야생동물 보호"

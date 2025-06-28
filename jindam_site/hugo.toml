@@ -55,8 +55,8 @@ theme = "Niello"
 	google_ad_client = "******"
 	ga4 = "******"
 [params.bannershowcase]
-	categories = ["Design"]
-	limit = 2
+	categories = ["추천"]
+	limit = 4
 [params.email]
 	contact = "editor@jindam.news"
 [params.ignore]

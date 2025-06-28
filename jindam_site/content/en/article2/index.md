@@ -1,7 +1,7 @@
 +++
 title = '[갤러리진담] 칠레 시민 120만 명 광장으로 부른 Whats App'
 date = 2024-03-17T00:35:00+09:00
-categories = ["갤러리진담"]
+categories = ["갤러리진담", "추천"]
 tags = ["칠레", "Whats App"]
 keywords = ["칠레", "Whats App"]
 description = "칠레 시민 120만 명 광장으로 부른 Whats App"
