@@ -1,12 +1,18 @@
 <article class="flex flex-col lg:flex-row items-center {{ if mod .index 2 }}bg-gray-800/50{{ end}} px-1 rounded-md">
     <div class="flex-none w-full lg:w-64 h-48 rounded-lg shadow-md bg-gray-900 shadow-gray-800">
         <a href="{{ .context.RelPermalink }}">
-        {{ $image := partial "imagextractor.html" . }}
-        {{ if not (hasPrefix $image.url "data:image/") }}
-            <img src="{{ $image.url }}?v={{ now.Unix }}" alt="{{ $image.alt }}"
-                class="w-full h-48 rounded-2xl object-cover" />
+        {{ $thumbnail := .context.Params.thumbnail }}
+        {{ if $thumbnail }}
+            {{ $imgURL := "" }}
+            {{ if or (hasPrefix $thumbnail "http") (hasPrefix $thumbnail "data:image") (hasPrefix $thumbnail "/") }}
+                {{ $imgURL = $thumbnail }}
+            {{ else }}
+                <!-- 보통 여기를 탈것이다. 로컬이미지니까.. 근데 외부이미지의 경우 자동으로 뒤에붙는 ?v... 때문에 제대로동작안하는듯  -->
+                {{ $imgURL = print (.context.Page.RelPermalink) $thumbnail }}
+            {{ end }}
+            <img src="{{ $imgURL }}?v={{ now.Unix }}" alt="{{ .context.Title }}" class="w-full h-48 rounded-2xl object-cover" />
         {{ else }}
-            <img src="{{ $image.url }}" alt="{{ $image.alt }}" class="w-full h-48 rounded-2xl object-cover" />
+            <img src="/image/jindam_logo_top_new.png" alt="No image" class="w-full h-48 rounded-2xl object-cover" />
         {{ end }}
         </a>
     </div>

@@ -5,6 +5,7 @@ categories = ["사회"]
 tags = ["사회", "야생동물"]
 keywords = ["야생동물"]
 description = "야생동물 보호"
+thumbnail = "1.jpg"
 draft = false
 +++
 
