@@ -146,7 +146,7 @@
 
     p strong {
         font-size: 1.2rem;
-        color: rgb(150, 56, 56);
+        /* color: rgb(150, 56, 56); */
     }
 
     pre {

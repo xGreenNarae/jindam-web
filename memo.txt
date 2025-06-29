@@ -15,6 +15,7 @@ npx tailwindcss -i ./assets/css/main.css -o ./assets/css/app.css --watch
 npx tailwindcss -i ./assets/css/main.css -o ./assets/css/app.css
 
 그리고 hugo 프로젝트디렉토리의 public 을 날리고 hugo 재실행하면 public 다시만들어지면서 css변경ㅇ완료되는듯.
+잘안되면 node_modules 날리고 다시 npm install 등..
 
 
 ## node modules 오류나는경우

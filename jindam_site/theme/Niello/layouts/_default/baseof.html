@@ -7,32 +7,48 @@
     <div class="
         mx-auto max-w-[calc(120rem)]
         min-h-screen
-        2xl:px-[calc(16rem)]
-        xl:px-24
-        md:px-8
-        px-4
-    ">
-
-        {{ partial "nav.html" . }}
-
-        {{ partial "header.html" . }}
-
+    " style="padding-left: 12rem; padding-right: 12rem;">
         <div class="
-            flex flex-col overflow-hidden
-            xl:px-0
-            lg:flex-row lg:space-x-8
+            2xl:px-[calc(16rem)]
+            xl:px-24
+            md:px-8
+            px-4
         ">
-            <main class="w-full overflow-hidden">
-                {{ block "main" . }}{{ end }}
-            </main>
+            {{ partial "nav.html" . }}
 
-            {{ partial "sidebar.html" . }}
+            {{ partial "header.html" . }}
         </div>
 
-        {{ partial "footer.html" . }}
+        <div class="
+            2xl:px-[calc(16rem)]
+            xl:px-24
+            md:px-8
+            px-4
+        ">
+            <div class="
+                flex flex-col overflow-hidden
+                xl:px-0
+                lg:flex-row lg:space-x-8
+            ">
+                <main class="w-full overflow-hidden">
+                    {{ block "main" . }}{{ end }}
+                </main>
 
-        {{ partial "cookie.html" . }}
+            <!-- {{ partial "sidebar.html" . }} -->
+            </div>
+        </div>
 
+        <div class="
+            2xl:px-[calc(16rem)]
+            xl:px-24
+            md:px-8
+            px-4
+        ">
+            {{ partial "footer.html" . }}
+
+            {{ partial "cookie.html" . }}
+
+        </div>
     </div>
 </body>
 
