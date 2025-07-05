@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://xgreennarae.github.io/jindam-web/en/</loc>
-    <lastmod>2024-12-23T08:16:03+08:00</lastmod>
+    <lastmod>2025-02-23T02:34:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -15,8 +15,11 @@
                 href="https://xgreennarae.github.io/jindam-web/en/"
                 />
   </url><url>
+    <loc>https://xgreennarae.github.io/jindam-web/en/tags/ai/</loc>
+    <lastmod>2025-02-23T02:34:00+09:00</lastmod>
+  </url><url>
     <loc>https://xgreennarae.github.io/jindam-web/en/categories/</loc>
-    <lastmod>2024-12-23T08:16:03+08:00</lastmod>
+    <lastmod>2025-02-23T02:34:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -27,6 +30,28 @@
                 hreflang="en-us"
                 href="https://xgreennarae.github.io/jindam-web/en/categories/"
                 />
+  </url><url>
+    <loc>https://xgreennarae.github.io/jindam-web/en/tags/</loc>
+    <lastmod>2025-02-23T02:34:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://xgreennarae.github.io/jindam-web/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://xgreennarae.github.io/jindam-web/en/tags/"
+                />
+  </url><url>
+    <loc>https://xgreennarae.github.io/jindam-web/en/article3/</loc>
+    <lastmod>2025-02-23T02:34:00+09:00</lastmod>
+  </url><url>
+    <loc>https://xgreennarae.github.io/jindam-web/en/categories/%EC%82%AC%ED%9A%8C/</loc>
+    <lastmod>2025-02-23T02:34:00+09:00</lastmod>
+  </url><url>
+    <loc>https://xgreennarae.github.io/jindam-web/en/tags/%ED%9A%A8%EB%8F%8C/</loc>
+    <lastmod>2025-02-23T02:34:00+09:00</lastmod>
   </url><url>
     <loc>https://xgreennarae.github.io/jindam-web/en/categories/privacy/</loc>
     <lastmod>2024-12-23T08:16:03+08:00</lastmod>
@@ -58,19 +83,6 @@
     <loc>https://xgreennarae.github.io/jindam-web/en/article2/</loc>
     <lastmod>2024-03-17T00:35:00+09:00</lastmod>
   </url><url>
-    <loc>https://xgreennarae.github.io/jindam-web/en/tags/</loc>
-    <lastmod>2024-03-17T00:35:00+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://xgreennarae.github.io/jindam-web/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://xgreennarae.github.io/jindam-web/en/tags/"
-                />
-  </url><url>
     <loc>https://xgreennarae.github.io/jindam-web/en/tags/whats-app/</loc>
     <lastmod>2024-03-17T00:35:00+09:00</lastmod>
   </url><url>
@@ -82,9 +94,6 @@
   </url><url>
     <loc>https://xgreennarae.github.io/jindam-web/en/tags/%EC%B9%A0%EB%A0%88/</loc>
     <lastmod>2024-03-17T00:35:00+09:00</lastmod>
-  </url><url>
-    <loc>https://xgreennarae.github.io/jindam-web/en/categories/%EC%82%AC%ED%9A%8C/</loc>
-    <lastmod>2024-03-11T11:06:00+09:00</lastmod>
   </url><url>
     <loc>https://xgreennarae.github.io/jindam-web/en/tags/%EC%82%AC%ED%9A%8C/</loc>
     <lastmod>2024-03-11T11:06:00+09:00</lastmod>
