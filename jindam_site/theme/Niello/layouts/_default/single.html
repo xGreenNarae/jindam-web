@@ -41,10 +41,17 @@
                 {{ .Title }}
             </a>
         </h1>
-        <time datetime="2025-03-16" class="flex items-center py-2 text-xl text-gray-600">
-            {{ .PublishDate.Format "2006-01-02 15:04" }}
-            &nbsp;&nbsp;|&nbsp;&nbsp;{{ .ReadingTime }} minute read
-        </time>
+        <div class="flex items-center gap-2 mt-3 py-2 text-xl space-x-4">
+            {{ if .Params.creator }}
+            <span>
+                {{ .Params.creator }}
+            </span>
+            {{ end }}
+            <time datetime="2025-03-16" class="text-gray-600">
+                {{ .PublishDate.Format "2006-01-02 15:04" }}
+                &nbsp;&nbsp;|&nbsp;&nbsp;{{ .ReadingTime }} minute read
+            </time>
+        </div>
 
         <!-- 행간 조정하는곳.  leading-.. 부분을 수정하면된다 7~10 -->
         <div
