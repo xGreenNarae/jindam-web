@@ -6,6 +6,7 @@ tags = ["사회", "야생동물"]
 keywords = ["야생동물"]
 description = "야생동물 보호"
 thumbnail = "1.jpg"
+creator = "임은재 선임기자"
 draft = false
 +++
 

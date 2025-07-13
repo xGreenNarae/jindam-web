@@ -6,6 +6,7 @@ tags = ["효돌", "Ai"]
 keywords = ["효돌", "독거노인"]
 description = ""
 thumbnail = "1.jpg"
+creator = "이종수 기자"
 draft = false
 +++
 

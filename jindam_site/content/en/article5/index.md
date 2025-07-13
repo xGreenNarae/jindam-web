@@ -6,6 +6,7 @@ tags = ["대구", "오오극장", "독립극장", "독립영화"]
 keywords = ["대구", "오오극장", "독립극장", "독립영화"]
 description = ""
 thumbnail = "1.jpg"
+creator = "홍지원 기자"
 draft = false
 +++
 

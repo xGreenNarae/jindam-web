@@ -6,6 +6,7 @@ tags = ["칠레", "Whats App"]
 keywords = ["칠레", "Whats App"]
 description = "칠레 시민 120만 명 광장으로 부른 Whats App"
 thumbnail = "1.jpg"
+creator = "변준언 선임기자"
 draft = false
 +++
 

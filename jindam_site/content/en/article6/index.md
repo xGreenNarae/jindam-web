@@ -6,6 +6,7 @@ tags = ["경마", "경마공원", "렛츠런파크", "도박", "중독", "경마
 keywords = ["경마", "경마공원", "렛츠런파크", "도박", "중독", "경마 중독"]
 description = ""
 thumbnail = "1.jpg"
+creator = "홍지원 기자"
 draft = false
 +++
 

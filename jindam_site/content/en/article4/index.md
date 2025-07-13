@@ -6,6 +6,7 @@ tags = ["전통예술", "공예"]
 keywords = ["공예", "전통예술"]
 description = ""
 thumbnail = "1.jpg"
+creator = "진담"
 draft = false
 +++
 

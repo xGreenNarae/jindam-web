@@ -46,8 +46,9 @@
             &nbsp;&nbsp;|&nbsp;&nbsp;{{ .ReadingTime }} minute read
         </time>
 
+        <!-- 행간 조정하는곳.  leading-.. 부분을 수정하면된다 7~10 -->
         <div
-            class="mt-1 lg:pb-10 px-2 text-lg leading-10 font-thin text-white overflow-hidden break-words article-body">
+            class="mt-1 lg:pb-10 px-2 text-lg leading-7 font-thin text-white overflow-hidden break-words article-body">
             {{
             .Content |
             safeHTML }}

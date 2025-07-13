@@ -22,9 +22,15 @@
                 {{ .context.LinkTitle }}
             </a>
         </h3>
-        <div class="flex flex-row items-center justify-start py-1 text-lg">
+        <div class="flex flex-row items-center justify-start gap-2 py-1 text-lg">
             {{ if gt .context.PublishDate 0 }}
-            <time datetime="2025-03-16" class="text-gray-600">{{ .context.PublishDate.Format "2006-01-02 15:04" }}
+            {{ if .context.Params.creator }}
+            <span>
+                {{ .context.Params.creator }}
+            </span>
+            {{ end }}
+            <time datetime="2025-03-16" class="text-gray-600">
+                {{ .context.PublishDate.Format "2006-01-02 15:04" }}
                 |
                 {{ .context.ReadingTime }} minute read</time>
             {{ end }}
