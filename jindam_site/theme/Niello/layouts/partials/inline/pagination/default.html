@@ -40,9 +40,13 @@
     <a aria-current="page" aria-label="Page {{ $k }}" class="page-link" role="button">{{ $k }}</a>
 </li>
 {{- else }}
-<li class="page-item px-3 hover:bg-gray-600 hover:rounded-full hover:cursor-pointer">
-    <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link"
-        role="button">{{ $k }}</a>
+<li class="page-item">
+    <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}"
+       aria-label="Page {{ $k }}"
+       class="page-link block px-3 rounded-full hover:bg-gray-600 hover:cursor-pointer text-center"
+       role="button">
+        {{ $k }}
+    </a>
 </li>
 {{- end }}
 {{- end }}
