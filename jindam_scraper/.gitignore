@@ -1,0 +1,19 @@
+# 가상환경 (venv 사용 시)
+.venv/
+.pythonlibs/
+
+# uv 패키지 잠금 파일 (필요하다면 관리도 가능하나 보통은 무시)
+uv.lock
+
+# Python 바이트코드
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 운영체제별 임시 파일
+.DS_Store
+Thumbs.db
+
+# output 폴더 (생성된 결과물, 보통 소스에는 포함하지 않음)
+output/
+
