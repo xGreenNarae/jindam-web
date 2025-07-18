@@ -3,6 +3,51 @@ import requests
 from bs4 import BeautifulSoup
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
+from bs4.element import Tag
+
+def get_meta_content(soup, name: str) -> str | None:
+    tag = soup.find("meta", attrs={"name": name})
+    return tag["content"].strip() if tag and tag.has_attr("content") else None
+
+# 제길 중복코드 발생..
+def get_meta_property_content(soup, name: str) -> str | None:
+    tag = soup.find("meta", attrs={"property": name})
+    return tag["content"].strip() if tag and tag.has_attr("content") else None
+
+def parse_keywords(soup) -> str:
+    tag = soup.find("meta", attrs={"name": "keywords"})
+    if not tag or not tag.has_attr("content"):
+        return ""
+
+    raw = tag["content"]
+    items = [kw.strip() for kw in raw.split(",") if kw.strip()]
+    return ", ".join(f'"{kw}"' for kw in items)
+
+def extract_article_body(soup: BeautifulSoup) -> str:
+    article_div = soup.find("article", id="article-view-content-div")
+    result = []
+    image_counter = 1
+    seen_texts = set()
+
+    for tag in article_div.descendants:
+        if isinstance(tag, Tag):
+            if tag.name == "figure":
+                caption = tag.find("figcaption")
+                caption_text = caption.get_text(strip=True) if caption else ""
+                figure_html = f'''<figure>
+  <img src="{image_counter}.jpg" alt="no image" />
+  <figcaption>{caption_text}</figcaption>
+</figure>
+'''
+                result.append(figure_html)
+                image_counter += 1
+            elif tag.name in ("p", "div", "strong"):
+                text = tag.get_text(strip=True)
+                if text and text not in seen_texts:
+                    result.append(text)
+                    seen_texts.add(text)
+
+    return "\n\n".join(result)
 
 def parse_article(url: str) -> dict:
     headers = {
@@ -14,43 +59,35 @@ def parse_article(url: str) -> dict:
     res.raise_for_status()
     soup = BeautifulSoup(res.text, "html.parser")
 
-    header = soup.find("header", class_="article-view-header")
-    if not header:
-        raise Exception("기사 헤더를 찾을 수 없습니다")
-
-    title_tag = header.find("h1", class_="heading")
-    reporter_tag = header.find("li", class_="name")
-    date_tag = header.find_all("li")[-1]
-
-    title = title_tag.get_text(strip=True) if title_tag else "제목 없음"
-    reporter = reporter_tag.get_text(strip=True) if reporter_tag else "기자명 없음"
-    date = date_tag.get_text(strip=True) if date_tag else "날짜 없음"
-
-    article_body = soup.find("div", class_="article-body")
-    if article_body:
-        paragraphs = article_body.find_all(["p", "div"])
-        body = "\n\n".join(p.get_text(strip=True) for p in paragraphs if p.get_text(strip=True))
-    else:
-        body = "(본문을 찾을 수 없습니다)"
-
-    return {
-        "title": title,
-        "reporter": reporter,
-        "date": date,
+    article = {
         "url": url,
-        "body": body,
+        "title": get_meta_content(soup, "title") or "제목 없음",
+        "description": get_meta_content(soup, "description") or "",
+        "keywords": parse_keywords(soup),
+        "categories": get_meta_property_content(soup, "article:section") or "미분류",
+        "tags": get_meta_property_content(soup, "article:section") or "태그없음",
+        "date": get_meta_property_content(soup, "article:published_time") or "날짜 미상",
+        "creator": get_meta_content(soup, "author") or "작성자 미상",
+        "body": extract_article_body(soup),
     }
 
+    return article
+
 def save_markdown(article: dict, out_path: Path):
-    content = f"""# {article['title']}
-
-- 기자: {article['reporter']}
-- 날짜: {article['date']}
-- 원문 링크: {article['url']}
-
----
+    content = f"""+++
+title = '{article['title']}'
+date = {article['date']}
+categories = ["{article['categories']}"]
+tags = ["{article['tags']}"]
+keywords = [{article['keywords']}]
+description = "{article['description']}"
+thumbnail = "1.jpg"
+creator = "{article['creator']}"
+draft = false
++++
 
 {article['body']}
+
 """
     out_path.write_text(content, encoding="utf-8")
 
@@ -62,15 +99,10 @@ def main():
     url = sys.argv[1]
     article = parse_article(url)
 
-    # URL에서 idxno 추출 (예: idxno=202)
-    parsed_url = urlparse(url)
-    qs = parse_qs(parsed_url.query)
-    idxno = qs.get("idxno", ["unknown"])[0]
-
     output_dir = Path("output")
     output_dir.mkdir(exist_ok=True)
 
-    output_file = output_dir / f"{idxno}.md"
+    output_file = output_dir / "index.md"
     save_markdown(article, output_file)
     print(f"✅ 저장 완료: {output_file}")
 
